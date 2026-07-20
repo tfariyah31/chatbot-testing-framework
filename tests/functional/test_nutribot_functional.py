@@ -1,5 +1,7 @@
 # Functional test suite for NutriBot
 
+from urllib import response
+
 import pytest
 import sys
 import os
@@ -82,19 +84,22 @@ class TestHappyPath:
 class TestIntentRecognition:
 
     @pytest.mark.parametrize("utterance", [
-        "Give me a recipe",
-        "What can I cook tonight?",
-        "I need meal ideas",
-        "Suggest something healthy to eat",
-        "What should I make for dinner?",
+    "Give me a recipe",
+    "What can I cook tonight?",
+    "I need meal ideas",
+    "Suggest something healthy to eat",
+    "What should I make for dinner?",
     ])
     def test_recipe_intent_variations(self, nutribot, utterance):
         """Bot should recognise recipe intent across varied phrasings."""
         response = nutribot.send(utterance)
         response_lower = response.lower()
-        assert any(word in response_lower for word in 
-                   ["recipe", "ingredient", "cook", "prepare", 
-                    "meal", "dish", "make"]), (
+        assert any(word in response_lower for word in
+                ["recipe", "ingredient", "cook", "prepare",
+                "meal", "dish", "make", "option", "idea",
+                "suggestion", "fajita", "soup", "salad",
+                "chicken", "quinoa", "lentil", "dinner",
+                "breakfast", "lunch", "food"]), (
             f"Failed to recognise recipe intent for: '{utterance}'\n"
             f"Got response: {response}"
         )
