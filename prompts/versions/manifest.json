@@ -1,0 +1,26 @@
+{
+  "current_version": "1.2",
+  "versions": [
+    {
+      "version": "1.0",
+      "file": "nutribot_v1.0.txt",
+      "date": "2026-07-01",
+      "changes": "Initial system prompt",
+      "regression_status": "baseline"
+    },
+    {
+      "version": "1.1",
+      "file": "nutribot_v1.1.txt",
+      "date": "2026-07-21",
+      "changes": "Added security rules — prompt extraction and admin override protections",
+      "regression_status": "passing"
+    },
+    {
+      "version": "1.2",
+      "file": "nutribot_v1.2.txt",
+      "date": "2026-07-21",
+      "changes": "Added identity protection rules — blocks DAN and identity replacement attacks. Found via regression test BUG-ADV-003.",
+      "regression_status": "in progress"
+    }
+  ]
+}
