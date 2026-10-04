@@ -154,7 +154,7 @@ st.divider()
 
 st.subheader("About This Project")
 st.markdown("""
-Built by **Fariyah** — Lead QA Manager with 14 years of QA/SDET 
+Built by **Fariyah** — Lead QA with 14 years of QA/SDET 
 experience, pivoting to AI Evaluation Engineering.
 
 This framework demonstrates the application of traditional QA 
